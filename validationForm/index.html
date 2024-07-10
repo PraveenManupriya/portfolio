@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTATION</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="result.html" id="form" method="GET">
+        <div class="title">
+            <h2>Create Account</h2>
+        </div>
+        <div class="input_group ">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" placeholder="First name">
+            <p>errorMessage</p>
+        </div>
+        <div class="input_group ">
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Last name">
+            <p>errorMessage</p>
+        </div>
+        <div class="input_group">
+            <label for="gender">Gender</label><br>
+            <div class="radio">
+                <input type="radio" name="gender" id="male" value="Male"><span>Male</span>
+                <input type="radio" name="gender" id="female" value="Female"><span>Female</span>
+            </div>
+            <p>errorMassage</p>
+        </div>
+        <div class="input_group">
+            <label for="username">User name</label>
+            <input type="text" id="username" name="username" placeholder="Username">
+            <p>errorMessage</p>
+        </div>
+        <div class="input_group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password">
+            <div class="check_in">
+                <span>show password</span><input type="checkbox" id="cb_password">
+            </div>
+            <p>errorMessage</p>
+        </div>
+        <div class="input_group">
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password">
+            <div class="check_in">
+                <span>show password</span><input type="checkbox" id="cb_confirm_password">
+            </div>
+            <p>errorMessage</p>
+        </div>
+        <button type="submit" id="btn_submit">Submit</button>
+        
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

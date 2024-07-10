@@ -1,0 +1,145 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root{
+    --bg_color:#000430;
+    --second_bg_color:#171c48;
+    --text:#fff;
+    --yellow:#f8cc06;
+    --orange:#fe6224;
+}
+
+body{
+    background-color: var(--bg_color);
+    color: var(--text);
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 120px auto 0 auto;
+}
+.top_container{
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid var(--yellow);
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    justify-content: space-between;
+}
+.details{
+    width: 100%;
+}
+.progressBar{
+    width: 100%;
+    height: 10px;
+    background-color: var(--second_bg_color);
+    border-radius: 5px;
+    margin-top: 25px;
+}
+.progress{
+    width: 0%;
+    height: 10px;
+    background-color: var(--orange);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+#numbers{
+    width: 100px;
+    height: 100px;
+    background-color: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 40px;
+    font-weight: 600;
+}
+form{
+    display: flex;
+    width: 100%;
+    margin-top: 60px;
+    gap: 10px;
+}
+
+input{
+    flex: 1;
+    padding: 10px 20px;
+    background-color: var(--second_bg_color);
+    border: 1px solid var(--yellow);
+    border-radius: 10px;
+    color: var(--text);
+    font-size: 16px;
+}
+
+button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--second_bg_color);
+    border: 1px solid var(--yellow);
+    color: var(--yellow);
+    font-size: 30px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+
+
+.task_list {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.taskItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--second_bg_color);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+}
+
+.task.completed p {
+    text-decoration: line-through;
+    color: var(--yellow);
+    font-size: 20px;
+}
+
+.icons i {
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: var(--orange);
+}
+
+.checkbox {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    margin: 0 15px;
+}
+
+
+
+

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll and Navbar Example</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header nav .menu-icon {
+            cursor: pointer;
+            font-size: 24px;
+            display: none;
+            /* Hide by default */
+        }
+
+        header nav .navbar {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        header nav .navbar li {
+            margin: 0 10px;
+        }
+
+        header nav .navbar li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        header nav .navbar li a.active {
+            font-weight: bold;
+        }
+
+        section {
+            padding: 60px 20px;
+            margin-top: 60px;
+            height: 100vh;
+        }
+
+        #section1 {
+            background: #f4f4f4;
+        }
+
+        #section2 {
+            background: #ddd;
+        }
+
+        #section3 {
+            background: #bbb;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header nav .menu-icon {
+                display: block;
+                /* Show menu icon on mobile */
+            }
+
+            header nav .navbar {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: #333;
+            }
+
+            header nav .navbar.active {
+                display: flex;
+                /* Show navbar when active */
+            }
+
+            header nav .navbar li {
+                margin: 10px 0;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="menu-icon" id="menu-icon">
+                <i class="bx bx-menu"></i>
+            </div>
+            <ul class="navbar" id="navbar">
+                <li> <a href="#home">Home</a></li>
+                <li> <a href="#education">Education</a></li>
+                <li> <a href="#services">Services</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li> <a href="#portfolio">Portfolio</a></li>
+                <li> <a href="#contact">Contact</a></li>
+                <li><i class='bx bx-moon toggle_icon'></i></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="education">
+        <h1>education</h1>
+    </section>
+    <section id="services">
+        <h1>services</h1>
+    </section>
+    <section id="skills">
+        <h1>skills</h1>
+    </section>
+    <section id="portfolio">
+        <h1>portfolio</h1>
+    </section>
+    <section id="contact">
+        <h1>contact</h1>
+    </section>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('header nav a');
+        const menuIcon = document.getElementById('menu-icon');
+        const navbar = document.getElementById('navbar');
+
+        window.onscroll = () => {
+            sections.forEach(sec => {
+                let top = window.scrollY;
+                let offset = sec.offsetTop - 150;
+                let height = sec.offsetHeight;
+                let id = sec.getAttribute('id');
+
+                if (top >= offset && top < offset + height) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+                    });
+                }
+            });
+        };
+
+        menuIcon.onclick = () => {
+            menuIcon.classList.toggle('bx-x');
+            navbar.classList.toggle('active');
+        };
+
+    </script>
+</body>
+
+</html>

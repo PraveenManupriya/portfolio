@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, lightseagreen, lightgreen);
+    padding: 20px;
+}
+
+#form {
+    width: 100%;
+    max-width: 470px;
+    background: linear-gradient(135deg, aliceblue, honeydew);
+    padding: 20px;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1); 
+    border-radius: 10px; 
+}
+
+.title {
+    padding: 10px;
+    text-align: center;
+}
+
+.input_group {
+    margin: 10px 0; 
+}
+
+.input_group label {
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.input_group input[type="text"],
+.input_group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px; 
+}
+
+.input_group input[type="text"]:hover,
+.input_group input[type="password"]:hover {
+    box-shadow: 1px 2px 3px skyblue;
+}
+
+.success input {
+    border: 2px solid green;
+}
+
+.error input {
+    border: 2px solid red;
+}
+
+.input_group .check_in {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    margin-top: 5px;
+}
+
+.input_group input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+#btn_submit {
+    width: 100%;
+    padding: 10px;
+    background-color: chocolate;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    border-radius: 5px; 
+}
+
+#btn_submit:hover {
+    background-color: rgb(243, 123, 37);
+    font-weight: bold;
+    box-shadow: 1px 2px 3px skyblue;
+}
+
+p {
+    text-transform: capitalize;
+    margin-top: 3px;
+    font-size: 13px;
+    color: red;
+    visibility: hidden;
+}
+
+.error p {
+    visibility: visible;
+}
+
+span {
+    font-size: 11px;
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
+.radio {
+    display: flex;
+    justify-content: space-between; 
+    text-transform: capitalize;
+    margin: 10px 0; 
+}
+
+.radio span {
+    font-size: 16px;
+    margin-right: 150px;
+}
+
+.input_group input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px; 
+    }
+
+    #form {
+        padding: 15px; 
+    }
+
+    .radio span {
+        margin-right: 80px; 
+    }
+
+    #btn_submit {
+        font-size: 14px; 
+        padding: 8px; 
+    }
+}
